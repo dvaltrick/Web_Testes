@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="ISO8859-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="product" content="Diego Ecker Valtrick">
+    <meta name="description" content="Portfólio">
+    <meta name="author" content="Diego Ecker Valtrick, Brazil, Joinville SC">
+	
+    <link href="css/metro-bootstrap.css" rel="stylesheet">
+    <link href="css/metro-bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- Load JavaScript Libraries -->
+    <script src="js/jquery/jquery.min.js"></script>
+    <script src="js/jquery/jquery.widget.min.js"></script>
+
+    <!-- Metro UI CSS JavaScript plugins -->
+    <script src="js/load-metro.js"></script>
+
+    <!-- Local JavaScript -->
+    <script src="js/github.info.js"></script>
+
+	<script>
+                function chamaJanelaEmail(){
+                    $.Dialog({
+                        overlay: true,
+                        shadow: true,
+                        flat: true,
+                        icon: '<span class="icon-mail"></span>',
+                        title: 'Contato',
+                        content: '',
+                        onShow: function(_dialog){
+                        var content = _dialog.children('.content');
+                        content.html('<div class="grid">' +
+                                        '<div class="row">'+
+                                            '<div class="span6">'+
+                                                '<form action="enviaemail.php" method="post">'+
+                                                '<div class="input-control text">'+
+                                                    '<input type="text" name="remetente" value="" placeholder="Nome"/>'+
+                                                    '<button class="btn-clear"></button>'+
+                                                '</div>'+
+                                                '<div class="input-control text">'+
+                                                    '<input type="text" name="email" value="" placeholder="Email"/>'+
+                                                    '<button class="btn-clear"></button>'+
+                                                '</div>'+
+                                                '<div class="input-control text">'+
+                                                    '<input type="text" name="assunto" value="" placeholder="Assunto"/>'+
+                                                    '<button class="btn-clear"></button>'+
+                                                '</div>'+
+                                                '<div class="input-control textarea">'+
+                                                    '<textarea name="mensagem" class="size6" placeholder="Mensagem"></textarea>'+
+                                                '</div>'+
+                                                '<button class="command-button default large"  >'+
+                                                    '<i class="icon-share-3 on-right"></i>'+
+                                                    'Enviar'+
+                                                    '<small>Envie seu recado!</small>'+
+                                                '</button>'+
+                                                '</form>'+
+                                            '</div>'+
+                                        '</div>'+
+                                    '</div>');
+                        }
+                    });                     
+                }
+                
+                function apresentaMensagem(){
+                        $.Notify.show("Em breve estará disponível o login para download de documentos e códigos!!!", 
+                                      "Aguarde...");
+                }
+		function buscaData(){
+			data = new Date();
+			dia = data.getDate();	
+			dia_semana = data.getDay();
+			
+			txDia.innerHTML = dia;
+			
+			txSemana.innerHTML = diaSemana(dia_semana);
+		}
+		
+		function diaSemana(dia){
+			switch(dia){
+				case 0:
+					return "Domingo";
+					break;
+				case 1:
+					return "Segunda-Feira";
+					break;
+				case 2:
+					return "Terça-Feira";
+					break;
+				case 3:
+					return "Quarta-Feira";
+					break;
+				case 4:
+					return "Quinta-Feira";
+					break;
+				case 5:
+					return "Sexta-Feira";
+					break;
+				case 6:
+					return "S&aacute;bado";
+					break;
+					
+				}
+		}
+	</script>
+	
+    <title>Diego Ecker Valtrick</title>
+</head>
+<body class="metro"  onLoad="buscaData()" charset="utf-8">
+    <div class="tile-area tile-area-dark">
+		<h1 class="tile-area-title fg-white">Diego Ecker Valtrick</h1>
+
+		<div class="tile-group six">
+            <a class="tile double bg-yellow" data-click="transform">
+                <div class="tile-content">
+                    <div class="text-right padding10 ntp">
+                        <h1 id="txDia" class="fg-white no-margin"></h1>
+                        <p id="txSemana" class="fg-white"></p>
+                    </div>
+                </div>
+                <div class="brand">
+                    <div class="label"><h3 class="no-margin fg-white"><span class="icon-calendar"></span></h3></div>
+                </div>
+            </a> <!-- end tile -->
+			
+			<a class="tile double bg-darkBlue live" href="http://www.facebook.com.br/diego.eckervaltrick" data-role="live-tile" data-effect="slideUp" data-click="transform">
+                <div class="tile-content icon">
+                    <span class="icon-facebook"></span>
+                </div>                
+            </a> <!-- end tile -->
+			
+            <a href="http://plus.google.com/+DiegoEckerValtrick" class="tile bg-orange" data-click="transform">
+                <div class="tile-content icon">
+                    <span class="icon-google-plus"></span>
+                </div>
+            </a>
+			
+            <a href="http://www.linkedin.com/profile/view?id=128512886" class="tile bg-lightBlue" data-click="transform">
+                <div class="tile-content icon">
+                    <span class="icon-linkedin"></span>
+                </div>
+            </a>		
+
+            <a href="quemsoueu.html" class="tile double bg-teal" data-click="transform">
+                <div class="tile-content icon">
+                    <span class="icon-user"></span>
+                </div>
+                <div class="brand">
+                    <div class="label"><p class="no-margin fg-white">Quem sou eu!</p></div>
+                </div>
+			</a>
+
+            <a href="historico.html" class="tile double bg-darkRed" data-click="transform">
+                <div class="tile-content icon">
+                    <span class="icon-history"></span>
+                </div>
+                <div class="brand">
+                    <div class="label"><p class="no-margin fg-white">Hist&oacute;rico Profissional</p></div>
+                </div>
+			</a>
+			
+            <a href="jobs.html" class="tile double bg-lightGreen" data-click="transform">
+                <div class="tile-content icon">
+                    <span class="icon-cube"></span>
+                </div>
+                <div class="brand">
+                    <div class="label"><p class="no-margin fg-white">Jobs</p></div>
+                </div>
+            </a>
+			
+         			
+
+        </div> <!-- end group -->
+		
+        <div class="tile-group one">
+            <div class="tile-group-title">&Aacute;rea Restrita</div>
+            <a class="tile double double-vertical ribbed-teal"  width="80%">
+		<h5 class="fg-white">Email</h5>
+		<div class="input-control text">
+                    <input type="text" value="" placeholder=""/>
+                    <button class="btn-clear"></button>
+		</div>
+		<h5 class="fg-white">Senha</h5>
+		<div class="input-control password">
+                    <input type="password" value="" placeholder=""/>
+                    <button class="btn-reveal"></button>
+		</div>
+		<button class="command-button allspace primary" onclick="apresentaMensagem()" >
+                    <i class="icon-share-2 on-left"></i>
+                    Login
+                    <small>Solicite seu acesso.</small>
+                </button>
+            </a>
+	</div> 
+		
+    </div>
+
+    <script src="js/hitua.js"></script>
+
+</body>
+</html>

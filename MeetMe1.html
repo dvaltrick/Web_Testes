@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<!--
+  * Please see the included README.md file for license terms and conditions.
+  -->
+<head>
+    <title>Blank Cordova Mobile App Project Template (Lite)</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+    <!-- see http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-dont-forget-the-viewport-meta-tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <style>
+        /* following two viewport lines are equivalent to the meta viewport statement above, needed for Windows */
+        /* see http://www.quirksmode.org/blog/archives/2014/05/html5_dev_conf.html and http://dev.w3.org/csswg/css-device-adapt/ */
+        @-ms-viewport { width: 100vw ; zoom: 100% ; }  @viewport { width: 100vw ; zoom: 100% ; }
+        @-ms-viewport { user-zoom: fixed ; }           @viewport { user-zoom: fixed ; }
+    </style>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/MeetMe.css">
+    
+    <script src="cordova.js"></script>          <!-- phantom library, needed for Cordova api calls, added during build -->
+    <script src="js/app.js"></script>           <!-- recommended location of your JavaScript code relative to other JS files -->
+    
+    <script src="js/funcoes.js"></script>           <!-- recommended location of your JavaScript code relative to other JS files -->
+
+    <script src="xdk/init-dev.js"></script>     <!-- normalizes device and document ready events, see README for details -->
+</head>
+
+<body class="padrao">
+    <div class="main-container">
+    <header class="block">
+      <div class="profile-menu">
+        <div class="profile-picture small-profile-picture">
+          <img width="40px" alt="Anne Hathaway picture" src="http://upload.wikimedia.org/wikipedia/commons/e/e1/Anne_Hathaway_Face.jpg">
+        </div>
+        <p>Anne Hathaway  <a href="#26"><span class="nome"></span></a></p>
+      </div>
+    </header>    
+      
+    <div class="middle-container">
+        <ul class="menu-box-menu">
+          <li>
+            <a class="menu-box-tab" href="#6"><span class="icon fontawesome-envelope scnd-font-color"></span>Messages<div class="menu-box-number">24</div></a>
+          </li>
+          <li>
+            <a class="menu-box-tab" href="#8"><span class="icon entypo-paper-plane scnd-font-color"></span>Invites<div class="menu-box-number">3</div></a>
+          </li>
+          <li>
+            <a class="menu-box-tab" href="#10"><span class="icon entypo-calendar scnd-font-color"></span>Events<div class="menu-box-number">5</div></a>
+          </li>
+          <li>
+            <a class="menu-box-tab" href="#12"><span class="icon entypo-cog scnd-font-color"></span>Account Settings</a>
+          </li>
+          <li>
+            <a class="menu-box-tab" href="#13">
+              <sapn class="icon entypo-chart-line scnd-font-color"></sapn>Statistics</a>
+          </li>
+        </ul>
+    </div>
+    </div>
+</body>
+</html>

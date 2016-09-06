@@ -1,0 +1,3 @@
+function iniciaComFacebook(){
+    //alert('hiii');
+}
