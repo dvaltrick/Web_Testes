@@ -1,0 +1,303 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #F5F5F5;
+}
+
+
+.listaTitulo{
+	color:white;
+	text-align:center;
+	font-family:"Lucida Sans Unicode";
+	background: linear-gradient(top, #CD3333, #8B2323);
+	background: -o-linear-gradient(top, #CD3333, #8B2323);
+	background: -ms-linear-gradient(top, #CD3333, #8B2323);
+	background: -moz-linear-gradient(top, #CD3333, #8B2323);
+	background: -webkit-linear-gradient(top, #CD3333, #8B2323);
+	width:300px;
+	height:40px;
+    font-size:20px;
+}
+
+.categoriaCheck{
+	color:white;
+	font-family:"Lucida Sans Unicode";
+	width:25%;
+	height:25px;
+	background: linear-gradient(top, #CD3333, #8B2323);
+	background: -o-linear-gradient(top, #CD3333, #8B2323);
+	background: -ms-linear-gradient(top, #CD3333, #8B2323);
+	background: -moz-linear-gradient(top, #CD3333, #8B2323);
+	background: -webkit-linear-gradient(top, #CD3333, #8B2323);
+    font-size:12px;
+}
+
+.lista{
+	list-style-type:none;
+	list-style-position:outside;
+	background-color: white;
+    margin: 0px;
+    padding: 0px;
+    box-shadow: 0 1px 2px -1px rgba(0, 0, 0, 1);
+    -webkit-box-shadow: 0 1px 5px -1px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0 1px 2px -1px rgba(0, 0, 0, 1);
+}
+
+
+.listaLinhaImg{
+	border-bottom:1px solid #F5F5F5;
+	font-size:18px;
+	font-family:"Lucida Sans Unicode";
+	color: black;
+	cursor: default;
+	height: 106px;
+}
+.listaLinhaImg:hover{
+	border-bottom:1px solid #F5F5F5;
+	font-size:18px;
+	font-family:"Lucida Sans Unicode";
+	cursor: pointer;
+	color: #8B2323 ;
+	height: 106px;
+	box-shadow: 1px 1px 1px -1px #8B2323;
+    -webkit-box-shadow: 1px 1px 1px 0px #8B2323;
+    -moz-box-shadow: 1px 1px 1px -1px #8B2323;
+}
+
+.listaLinha{
+	border-bottom:1px solid #F5F5F5;
+	height:30px;
+    font-size:14px;
+	font-family:"Lucida Sans Unicode";
+	color: black;
+	cursor: default;
+	padding-left:5px;
+}
+
+.listaLinha:hover{
+	border-bottom:1px solid #F5F5F5;
+	height:30px;
+    font-size:14px;
+	font-family:"Lucida Sans Unicode";
+	cursor: pointer;
+	color: #8B2323 ;
+    box-shadow: 1px 1px 1px -1px #8B2323;
+    -webkit-box-shadow: 1px 1px 1px 0px #8B2323;
+    -moz-box-shadow: 1px 1px 1px -1px #8B2323;
+}
+
+
+.titulo{
+	color: #CD3333;
+	text-align:center;
+	font-size:80px;
+	font-family:"Kunstler Script","Lucida Calligraphy","Lucida Sans Unicode";
+}
+
+.dadosUsuario{
+  position:absolute;
+  text-align: center;
+  width: 15%;
+  background: radial-gradient(50% 50%, farthest-side,#CD3333, #8B2323);
+  background: -moz-radial-gradient(50% 50%, farthest-side,#CD3333, #8B2323);
+  background: -webkit-radial-gradient(50% 50%, farthest-side,#CD3333, #8B2323);
+  background: -o-radial-gradient(50% 50%, farthest-side,#CD3333, #8B2323);
+  background: -ms-radial-gradient(50% 50%, farthest-side,#CD3333, #8B2323);
+  box-shadow: 0 1px 2px -1px rgba(0, 0, 0, 1);
+  -webkit-box-shadow: 0 1px 5px -1px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 0 1px 2px -1px rgba(0, 0, 0, 1);
+  color: white;
+  height: 35%;
+  font-family:"Lucida Sans Unicode";
+}
+
+.dadosObra{
+  position:absolute;
+  text-align: left;
+  width: 800px;
+  background: radial-gradient(50% 50%, farthest-side,#CD3333, #8B2323);
+  background: -moz-radial-gradient(50% 50%, farthest-side,#CD3333, #8B2323);
+  background: -webkit-radial-gradient(50% 50%, farthest-side,#CD3333, #8B2323);
+  background: -o-radial-gradient(50% 50%, farthest-side,#CD3333, #8B2323);
+  background: -ms-radial-gradient(50% 50%, farthest-side,#CD3333, #8B2323);
+  box-shadow: 0 1px 2px -1px rgba(0, 0, 0, 1);
+  -webkit-box-shadow: 0 1px 5px -1px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 0 1px 2px -1px rgba(0, 0, 0, 1);
+  color: white;
+  height: 250px;
+  font-family:"Lucida Sans Unicode";
+}
+
+.imgUsuario{
+	width:120px;
+	height:150px;
+}
+
+#menu ul { 
+    text-align:center;
+	padding:0px;
+	margin:0px;
+	float: left;
+	width: 100%;
+	background-color:#F5F5F5;
+	list-style:none;
+	font-family:"Lucida Sans Unicode";
+	box-shadow: 0 1px 2px -1px rgba(0, 0, 0, 1);
+	-webkit-box-shadow: 0 1px 5px -1px rgba(0, 0, 0, 1);
+	-moz-box-shadow: 0 1px 2px -1px rgba(0, 0, 0, 1);
+}
+
+#menu ul li { 
+	display: inline; 
+}
+
+#menu ul li a {
+	background-color:#F5F5F5;
+	color: #8B2323;
+	text-decoration: none;
+	border-bottom:3px solid #F5F5F5;
+	padding: 2px 10px;
+	float:left;
+	width:6%;
+}
+
+#menu ul li a:hover {
+	background-color:#F5F5F5;
+	color: #CD3333;
+	border-bottom:3px solid #CD3333;
+}
+
+.tituloPrincipal{
+	color: white;
+	left:10%;
+	text-align:left;
+	font-size:80px;
+	font-family:"Kunstler Script","Lucida Calligraphy","Lucida Sans Unicode";
+	background: radial-gradient(50% 50%, farthest-side,#CD3333, #8B2323);
+	background: -moz-radial-gradient(50% 50%, farthest-side,#CD3333, #8B2323);
+	background: -webkit-radial-gradient(50% 50%, farthest-side,#CD3333, #8B2323);
+	background: -o-radial-gradient(50% 50%, farthest-side,#CD3333, #8B2323);
+	background: -ms-radial-gradient(50% 50%, farthest-side,#CD3333, #8B2323);
+	height:90px;
+	margin: 0;
+	padding: 20px 20px 20px 20px ;
+}
+
+.subtitulo{
+	font-size: 20px;
+}
+
+.link{
+	color:white;
+	font-size:12px;
+	text-align:right;
+	text-decoration:none;
+}
+
+.botaoLogin:hover{
+	cursor:pointer;
+}
+
+.botaoVermelho:hover{
+	cursor:pointer;
+}
+
+
+.tableLogin{
+    color:white;
+	font-family:"Lucida Sans Unicode";
+	width: 50%;
+	margin-left:25%;
+}
+
+.botaoLogin{
+   color:#8B2323;
+   background-color: white;
+   width:90%;
+   font-family:"Lucida Sans Unicode";
+   border-radius: 35px; 
+   -moz-border-radius: 35px;
+   -webkit-border-radius: 35px;
+   border:0;
+   height:25px;
+   cursor:default;
+}
+
+.botaoVermelho{
+   color: white;
+   background-color: #8B2323;
+   width:90%;
+   font-family:"Lucida Sans Unicode";
+   border-radius: 35px; 
+   -moz-border-radius: 35px;
+   -webkit-border-radius: 35px;
+   border:0;
+   height:25px;
+   cursor:default;
+}
+
+.CaixaVermelho{
+   color: white;
+   background-color: white;
+   font-family:"Lucida Sans Unicode";
+   cursor:default;
+   border:2px;
+   border-color:white;
+   width: 40px;
+   text-decoration:none;
+}
+
+.linkCaixaVermelho{
+   color: white;
+   background-color: #8B2323;
+   font-family:"Lucida Sans Unicode";
+   cursor:default;
+   font-size: 20px;
+   text-decoration:none;
+
+}
+
+.login{
+  position:absolute;
+  left:25%;
+  top:20%;
+  bottom:20%;
+  text-align: center;
+  width: 50%;
+  background: radial-gradient(50% 50%, farthest-side,#CD3333, #8B2323);
+  background: -moz-radial-gradient(50% 50%, farthest-side,#CD3333, #8B2323);
+  background: -webkit-radial-gradient(50% 50%, farthest-side,#CD3333, #8B2323);
+  background: -o-radial-gradient(50% 50%, farthest-side,#CD3333, #8B2323);
+  background: -ms-radial-gradient(50% 50%, farthest-side,#CD3333, #8B2323);
+  box-shadow: 0 1px 2px -1px rgba(0, 0, 0, 1);
+  -webkit-box-shadow: 0 1px 5px -1px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 0 1px 2px -1px rgba(0, 0, 0, 1);
+  border-radius: 35px; 
+  -moz-border-radius: 35px;
+  -webkit-border-radius: 35px;
+  color: white;
+  height: 60%;
+  font-family:"Lucida Sans Unicode";
+
+}
+
+.tableCadInterno{
+	color: #8B2323;
+	font-family:"Lucida Sans Unicode";
+	width: 100%;
+	margin-left:10%;
+}
+
+.icones{
+	list-style-type: none;
+	text-decoration:none;
+	color:green;
+}
+
+
+
+
+
+

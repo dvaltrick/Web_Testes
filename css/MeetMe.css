@@ -1,0 +1,35 @@
+@font-face{
+    font-family: champagne;
+    src: url(ChampagneLimousines.ttf);
+}
+
+.padrao{
+    font-family: sans-serif;
+    width: 100%;
+    height: 100%;
+}
+
+.cabecalho{
+    text-align: center;
+    width: 100%;
+    height: 30%;
+}
+
+.titulo{
+    color:white;
+    font-family: "champagne";
+    font-size: 60px;
+    align-content: center;
+}
+
+.nome{
+    color:white;
+    font-family: "champagne";
+    font-size: 20px;
+}
+
+.subtitulo{
+    color:#E0FFFF;
+    font-family: "champagne";
+    font-size: 18px;
+}

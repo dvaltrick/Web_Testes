@@ -1,0 +1,179 @@
+<?PHP
+	require 'funcoes.php';
+	
+	$nomeComp  = $_GET("nomeComp");
+	$nomeUsu   = $_GET("nomeUsu");
+	$senha     = $_GET("senha");
+	$confSenha = $_GET("confSenha");
+	$email     = $_GET("email");
+	$dataNasc  = $_GET("dataNasc");
+	$arquivo   = $_FILES['foto']['tmp_name']; 
+	$tamanho   = $_FILES['foto']['size'];
+	$tipo      = $_FILES['foto']['type'];
+	$nome      = $_FILES['foto']['name'];
+	$estado    = $_GET("uf");
+	$cidade    = $_GET("cidade");
+	
+	if(!($nomeComp == "")){
+		if($nomeUsu == ""){
+			echo "Insira seu nome de usuário corretamente.";
+			exit;
+		}	
+
+		if($senha == ""){
+			echo "Insira uma senha corretamente.";
+			exit;
+		}	
+		
+		$con = conectaBanco();
+		
+		if ( $arquivo != "none" ){
+			$fp = fopen($arquivo, "rb");
+			$conteudo = fread($fp, $tamanho);
+			$conteudo = addslashes($conteudo);
+			fclose($fp); 
+		} else{
+			$conteudo = "";
+		}
+		
+		$sql = "Select count(nomeUsuario) Where nomeUsuario = '".$nomeUsu."' ";
+		
+		$result = mysql_query($sql,$con);
+		$val = mysql_result($result,0);
+		
+		if($val = 0){
+			$sql = "INSERT INTO usuario(nomeUsuario,hashSenha,nomeCompleto,dataNascimento,estado, cidade, email, foto) VALUES('".
+			                            $nomeUsu."','".md5($senha)."','".$nomeComp."',date_format(".$dataNasc.",'%Y/%m/%d'),'"
+										.$estado."','".$cidade."',". $conteudo  .")";
+			if(mysql_query($sql,$con)){
+				echo "Genero cadastrado com sucesso."
+			}else{
+				die('Não foi possível inserir o genero');
+			} 
+		}else{
+			echo "Nome de usuário já cadastrado."
+			exit;
+		}
+		
+		mysql_close($con);
+	}
+	
+?>
+
+<html>
+<header>
+  <link rel="stylesheet" href="style/style.css">
+  <script type="text/javascript" src="js/rotina.js"></script>
+</header>
+<body>
+	<head>
+	   <h1 class="titulo">Eu Conto</h1>
+	</head>
+	<table class="login">
+		<th colspan=2>
+			<p class="subtitulo">Cadastro de Usuário</p>
+		</th>
+		<tr>
+			<td align=right width=40%>
+				<p>Nome Completo:</p>
+			</td>
+			<td align=left>
+				<input type="text" size=45px id="nomeComp" />
+			</td>
+		</tr>
+		<tr>
+			<td align=right>
+				<p>E-mail:</p>
+			</td>
+			<td align=left>
+				<input type="text" size=45px id="email" />
+			</td>
+		</tr>
+		<tr>
+			<td align=right>
+				<p>Data Nascimento:</p>
+			</td>
+			<td align=left>
+				<input type="date" id="dataNasc" />
+			</td>
+		</tr>
+		<tr>
+			<td align=right >
+				<p>Estado/Cidade:</p>
+			</td>
+			<td align=left>
+				<select id="uf">
+					<option value="AC">Acre</option>
+					<option value="AL">Alagoas</option>
+					<option value="AP">Amapá</option>
+					<option value="AM">Amazonas</option>
+					<option value="BA">Bahia</option>
+					<option value="CE">Ceará</option>
+					<option value="DF">Distrito Federal</option>
+					<option value="ES">Espírito Santo</option>
+					<option value="GO">Goiás</option>
+					<option value="MA">Maranhão</option>
+					<option value="MT">Mato Grosso</option>
+					<option value="MS">Mato Grosso do Sul</option>
+					<option value="MG">Minas Gerais</option>
+					<option value="PA">Pará</option>
+					<option value="PB">Paraíba</option>
+					<option value="PR">Paraná</option>
+					<option value="PE">Pernambuco</option>
+					<option value="PI">Piauí</option>
+					<option value="RJ">Rio de Janeiro</option>
+					<option value="RN">Rio Grande do Norte</option>
+					<option value="RS">Rio Grande do Sul</option>
+					<option value="RO">Rondônia</option>
+					<option value="RR">Rorâima</option>
+					<option value="SC">Santa Catarina</option>
+					<option value="SP">São Paulo</option>
+					<option value="SE">Sergipe</option>
+					<option value="TO">Tocantins</option>
+				</select>
+				<input type="text" id="cidade"/>
+			</td>
+		</tr>
+		<tr>
+			<td align=right>
+				<p>Foto:</p>
+			</td>
+			<td align=left>
+                <input type="file" id="foto" size="chars"/>
+			</td>
+		</tr>
+		<tr>
+			<td align=right>
+				<p>Nome Usuário:</p>
+			</td>
+			<td align=left>
+				<input type="text" id="nomeUsu" />
+			</td>
+		</tr>
+		<tr>
+			<td align=right>
+				<p>Senha:</p>
+			</td>
+			<td align=left>
+				<input type="password" id="senha" />
+			</td>
+		</tr>
+		<tr>
+			<td align=right>
+				<p>Confirma Senha:</p>
+			</td>
+			<td align=left>
+				<input type="password" id="confSenha" />
+			</td>
+		</tr>
+		<tr>
+		  <td colspan=1>
+			<input type="button" class="botaoLogin" value="Voltar" onclick="voltar();" />
+		  </td>
+		  <td>
+			<input type="submit" class="botaoLogin" value="Confirma" onclick="validaCadastro();" />
+		  </td>
+		</tr>
+	</table>
+</body>
+</html>
